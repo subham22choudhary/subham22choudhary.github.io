@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subham Choudhary — AI Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Fraunces:ital,wght@0,300;0,400;1,300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         *,
         *::before,
         *::after {
             box-sizing: border-box;
             margin: 0;
-            padding: 0;
+            padding: 0
         }
 
         :root {
@@ -34,19 +32,19 @@
         }
 
         html {
-            scroll-behavior: smooth;
+            scroll-behavior: smooth
         }
 
         body {
             background: var(--bg);
             color: var(--text);
-            font-family: 'DM Mono', monospace;
+            font-family: 'Inter', sans-serif;
             font-size: 15px;
             line-height: 1.7;
-            overflow-x: hidden;
+            overflow-x: hidden
         }
 
-        /* — NAV — */
+        /* NAV */
         nav {
             position: fixed;
             top: 0;
@@ -59,20 +57,19 @@
             padding: 1rem 3rem;
             background: rgba(10, 10, 15, 0.85);
             backdrop-filter: blur(12px);
-            border-bottom: 0.5px solid var(--border);
+            border-bottom: 0.5px solid var(--border)
         }
 
         .nav-logo {
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
+            font-weight: 700;
             font-size: 1rem;
             color: var(--text);
-            letter-spacing: -0.02em;
+            letter-spacing: -0.02em
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2rem
         }
 
         .nav-links a {
@@ -81,44 +78,48 @@
             font-size: 12px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            transition: color 0.2s;
+            transition: color 0.2s
         }
 
         .nav-links a:hover {
-            color: var(--text);
+            color: var(--text)
         }
 
-        /* — HERO — */
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding: 8rem 3rem 4rem;
             position: relative;
-            overflow: hidden;
+            overflow: hidden
         }
 
         .hero-bg {
             position: absolute;
             inset: 0;
-            background:
-                radial-gradient(ellipse 60% 50% at 70% 50%, rgba(124, 106, 247, 0.08) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 60% at 20% 80%, rgba(62, 207, 178, 0.05) 0%, transparent 60%);
+            background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(124, 106, 247, 0.08) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 20% 80%, rgba(62, 207, 178, 0.05) 0%, transparent 60%)
         }
 
         .hero-grid {
             position: absolute;
             inset: 0;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
             background-size: 60px 60px;
-            mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+            mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%)
+        }
+
+        .hero-inner {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem
         }
 
         .hero-content {
-            position: relative;
-            max-width: 900px;
+            max-width: 520px
         }
 
         .hero-tag {
@@ -133,7 +134,7 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--tag-text);
-            margin-bottom: 2rem;
+            margin-bottom: 2rem
         }
 
         .hero-tag::before {
@@ -142,7 +143,7 @@
             height: 6px;
             border-radius: 50%;
             background: var(--accent2);
-            animation: pulse 2s infinite;
+            animation: pulse 2s infinite
         }
 
         @keyframes pulse {
@@ -150,124 +151,133 @@
             0%,
             100% {
                 opacity: 1;
-                transform: scale(1);
+                transform: scale(1)
             }
 
             50% {
                 opacity: 0.5;
-                transform: scale(0.8);
+                transform: scale(0.8)
             }
         }
 
         .hero h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(3.5rem, 8vw, 7rem);
-            font-weight: 800;
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 700;
             line-height: 0.95;
-            letter-spacing: -0.04em;
-            margin-bottom: 2rem;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem
         }
 
-        .hero h1 em {
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-weight: 300;
-            color: var(--accent);
+        .hero h1 .name-first {
+            color: var(--accent)
+        }
+
+        .hero h1 .name-last {
+            color: var(--accent2)
         }
 
         .hero-sub {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--muted);
-            max-width: 480px;
+            max-width: 420px;
             line-height: 1.8;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem
         }
 
         .hero-cta {
             display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+            gap: 0.75rem;
+            flex-wrap: wrap
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 24px;
+            padding: 11px 22px;
             border-radius: 6px;
-            font-family: 'DM Mono', monospace;
+            font-family: 'Inter', sans-serif;
             font-size: 13px;
             letter-spacing: 0.02em;
             text-decoration: none;
             transition: all 0.2s;
             cursor: pointer;
             border: none;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background: #8f7ff9;
-            transform: translateY(-1px);
+            font-weight: 500
         }
 
         .btn-ghost {
             background: transparent;
             color: var(--muted);
-            border: 0.5px solid var(--border2);
+            border: 0.5px solid var(--border2)
         }
 
         .btn-ghost:hover {
             color: var(--text);
             border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px)
         }
 
-        .hero-stats {
-            position: absolute;
-            right: 3rem;
-            top: 50%;
-            transform: translateY(-50%);
+        /* CONTACT LINKS (inside hero) */
+        .hero-contact {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 10px;
+            min-width: 340px;
+            max-width: 400px
         }
 
-        .stat-card {
-            background: var(--bg3);
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.9rem 1.1rem;
+            background: var(--bg2);
             border: 0.5px solid var(--border);
-            border-radius: 10px;
-            padding: 1.25rem 1.5rem;
-            text-align: right;
-            min-width: 140px;
-            transition: border-color 0.2s;
-        }
-
-        .stat-card:hover {
-            border-color: var(--border2);
-        }
-
-        .stat-num {
-            font-family: 'Syne', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            line-height: 1;
+            border-radius: 8px;
+            text-decoration: none;
             color: var(--text);
+            transition: all 0.2s
         }
 
-        .stat-label {
-            font-size: 10px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+        .contact-link:hover {
+            border-color: var(--border2);
+            background: var(--bg3);
+            transform: translateX(4px)
+        }
+
+        .contact-link-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            flex-shrink: 0
+        }
+
+        .contact-link-label {
+            font-size: 11px;
             color: var(--muted);
-            margin-top: 4px;
+            letter-spacing: 0.05em
         }
 
-        /* — SECTION SHELL — */
+        .contact-link-value {
+            font-size: 12px;
+            color: var(--text);
+            margin-top: 1px
+        }
+
+        .contact-link-arrow {
+            margin-left: auto;
+            color: var(--muted);
+            font-size: 18px
+        }
+
+        /* SECTIONS */
         section {
-            padding: 6rem 3rem;
+            padding: 6rem 3rem
         }
 
         .section-label {
@@ -276,22 +286,81 @@
             letter-spacing: 0.2em;
             text-transform: uppercase;
             color: var(--accent2);
-            margin-bottom: 1rem;
+            margin-bottom: 1rem
         }
 
         h2.section-title {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-            margin-bottom: 3rem;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 3rem
         }
 
-        /* — EXPERIENCE — */
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 0.5px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden
+        }
+
+        .skill-group {
+            background: var(--bg2);
+            padding: 1.5rem;
+            transition: background 0.2s
+        }
+
+        .skill-group:hover {
+            background: var(--bg3)
+        }
+
+        .skill-group-title {
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent2);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .skill-group-title::after {
+            content: '';
+            flex: 1;
+            height: 0.5px;
+            background: var(--border2)
+        }
+
+        .skill-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px
+        }
+
+        .chip {
+            background: var(--bg);
+            border: 0.5px solid var(--border2);
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 12px;
+            color: var(--muted);
+            transition: all 0.15s
+        }
+
+        .chip:hover {
+            color: var(--text);
+            border-color: rgba(255, 255, 255, 0.2)
+        }
+
+        /* TIMELINE */
         .timeline {
             position: relative;
-            padding-left: 2px;
+            padding-left: 2px
         }
 
         .timeline::before {
@@ -301,12 +370,12 @@
             top: 0;
             bottom: 0;
             width: 1px;
-            background: linear-gradient(to bottom, transparent, var(--accent) 20%, var(--accent) 80%, transparent);
+            background: linear-gradient(to bottom, transparent, var(--accent) 20%, var(--accent) 80%, transparent)
         }
 
         .timeline-item {
             padding: 0 0 3.5rem 2.5rem;
-            position: relative;
+            position: relative
         }
 
         .timeline-item::before {
@@ -319,12 +388,12 @@
             border-radius: 50%;
             background: var(--accent);
             border: 2px solid var(--bg);
-            box-shadow: 0 0 0 3px rgba(124, 106, 247, 0.2);
+            box-shadow: 0 0 0 3px rgba(124, 106, 247, 0.2)
         }
 
         .timeline-item:first-child::before {
             background: var(--accent2);
-            box-shadow: 0 0 0 3px rgba(62, 207, 178, 0.2);
+            box-shadow: 0 0 0 3px rgba(62, 207, 178, 0.2)
         }
 
         .job-header {
@@ -333,20 +402,19 @@
             align-items: flex-start;
             gap: 1rem;
             flex-wrap: wrap;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.75rem
         }
 
         .job-title {
-            font-family: 'Syne', sans-serif;
             font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text);
+            font-weight: 600;
+            color: var(--text)
         }
 
         .job-company {
             color: var(--accent);
             font-size: 0.85rem;
-            margin-top: 2px;
+            margin-top: 2px
         }
 
         .job-date {
@@ -358,13 +426,13 @@
             border: 0.5px solid var(--border);
             border-radius: 100px;
             padding: 4px 12px;
-            align-self: flex-start;
+            align-self: flex-start
         }
 
         .job-current {
             color: var(--accent2);
             border-color: rgba(62, 207, 178, 0.25);
-            background: rgba(62, 207, 178, 0.06);
+            background: rgba(62, 207, 178, 0.06)
         }
 
         .job-bullets {
@@ -373,26 +441,26 @@
             font-size: 13px;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 6px
         }
 
         .job-bullets li {
             padding-left: 16px;
-            position: relative;
+            position: relative
         }
 
         .job-bullets li::before {
             content: '—';
             position: absolute;
             left: 0;
-            color: var(--border2);
+            color: var(--border2)
         }
 
         .job-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-top: 1rem;
+            margin-top: 1rem
         }
 
         .tag {
@@ -403,263 +471,75 @@
             color: var(--tag-text);
             border: 0.5px solid rgba(124, 106, 247, 0.18);
             border-radius: 4px;
-            padding: 3px 8px;
+            padding: 3px 8px
         }
 
         .tag-green {
             background: rgba(62, 207, 178, 0.08);
             color: #4fd4bc;
-            border-color: rgba(62, 207, 178, 0.18);
+            border-color: rgba(62, 207, 178, 0.18)
         }
 
         .tag-orange {
             background: rgba(242, 139, 62, 0.08);
             color: #f0a068;
-            border-color: rgba(242, 139, 62, 0.18);
+            border-color: rgba(242, 139, 62, 0.18)
         }
 
-        /* — SKILLS — */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1px;
-            background: var(--border);
-            border: 0.5px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .skill-group {
-            background: var(--bg2);
-            padding: 1.5rem;
-            transition: background 0.2s;
-        }
-
-        .skill-group:hover {
-            background: var(--bg3);
-        }
-
-        .skill-group-title {
-            font-size: 10px;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--accent2);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .skill-group-title::after {
-            content: '';
-            flex: 1;
+        .divider {
             height: 0.5px;
-            background: var(--border2);
+            background: linear-gradient(90deg, transparent, var(--border2), transparent);
+            margin: 0 3rem
         }
 
-        .skill-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .chip {
-            background: var(--bg);
-            border: 0.5px solid var(--border2);
-            border-radius: 4px;
-            padding: 4px 10px;
-            font-size: 12px;
-            color: var(--muted);
-            transition: all 0.15s;
-        }
-
-        .chip:hover {
-            color: var(--text);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        /* — PROJECTS — */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .project-card {
-            background: var(--bg2);
-            border: 0.5px solid var(--border);
-            border-radius: 12px;
-            padding: 1.75rem;
-            transition: border-color 0.2s, transform 0.2s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            border-color: var(--border2);
-            transform: translateY(-2px);
-        }
-
-        .project-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            background: var(--tag-bg);
-            border: 0.5px solid rgba(124, 106, 247, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            margin-bottom: 1.25rem;
-        }
-
-        .project-name {
-            font-family: 'Syne', sans-serif;
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-desc {
-            font-size: 12px;
-            color: var(--muted);
-            line-height: 1.7;
-            flex: 1;
-            margin-bottom: 1.25rem;
-        }
-
-        .project-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        /* — CONTACT — */
-        .contact-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .contact-text h2 {
-            margin-bottom: 1rem;
-        }
-
-        .contact-text p {
-            color: var(--muted);
-            font-size: 14px;
-            max-width: 380px;
-            line-height: 1.8;
-        }
-
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 1.25rem;
-            background: var(--bg2);
-            border: 0.5px solid var(--border);
-            border-radius: 8px;
-            text-decoration: none;
-            color: var(--text);
-            transition: all 0.2s;
-        }
-
-        .contact-link:hover {
-            border-color: var(--border2);
-            background: var(--bg3);
-            transform: translateX(4px);
-        }
-
-        .contact-link-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-
-        .contact-link-label {
-            font-size: 12px;
-            color: var(--muted);
-            letter-spacing: 0.05em;
-        }
-
-        .contact-link-value {
-            font-size: 13px;
-            color: var(--text);
-            margin-top: 1px;
-        }
-
-        .contact-link-arrow {
-            margin-left: auto;
-            color: var(--muted);
-            font-size: 18px;
-        }
-
-        /* — FOOTER — */
         footer {
             border-top: 0.5px solid var(--border);
             padding: 2rem 3rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             font-size: 11px;
             color: var(--muted);
-            letter-spacing: 0.05em;
+            letter-spacing: 0.05em
         }
 
-        /* — DIVIDER — */
-        .divider {
-            height: 0.5px;
-            background: linear-gradient(90deg, transparent, var(--border2), transparent);
-            margin: 0 3rem;
+        @media(max-width:900px) {
+            .hero-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2.5rem
+            }
+
+            .hero-contact {
+                min-width: unset;
+                width: 100%;
+                max-width: 100%
+            }
         }
 
-        @media (max-width: 768px) {
+        @media(max-width:768px) {
             nav {
-                padding: 1rem 1.5rem;
+                padding: 1rem 1.5rem
             }
 
             .nav-links {
-                gap: 1.25rem;
+                gap: 1.25rem
             }
 
             .hero {
-                padding: 7rem 1.5rem 3rem;
-            }
-
-            .hero-stats {
-                display: none;
+                padding: 7rem 1.5rem 3rem
             }
 
             section {
-                padding: 4rem 1.5rem;
+                padding: 4rem 1.5rem
             }
 
-            .contact-inner {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            footer {
-                flex-direction: column;
-                gap: 0.5rem;
-                text-align: center;
+            .skills-grid {
+                grid-template-columns: 1fr
             }
 
             .divider {
-                margin: 0 1.5rem;
+                margin: 0 1.5rem
             }
         }
     </style>
@@ -671,44 +551,126 @@
     <nav>
         <div class="nav-logo">SC.</div>
         <div class="nav-links">
-            <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#experience">Experience</a>
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO + CONTACT -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="hero-grid"></div>
-        <div class="hero-content">
-            <div class="hero-tag">Available for new opportunities</div>
-            <h1>
-                Subham<br>
-                <em>Choud</em>hary
-            </h1>
-            <p class="hero-sub">
-                AI Engineer & Full-Stack Developer. 6+ years building production-grade systems — from agentic LLM
-                pipelines to scalable frontends. Currently at Cotiviti, wiring intelligent AI into healthcare.
-            </p>
-            <div class="hero-cta">
-                <a href="mailto:subham.choudhary.fullstack@gmail.com" class="btn btn-primary">Get in touch →</a>
-                <a href="#experience" class="btn btn-ghost">View experience</a>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-tag">Available for new opportunities</div>
+                <h1>
+                    <span class="name-first">Subham</span><br>
+                    <span class="name-last">Choudhary</span>
+                </h1>
+                <p class="hero-sub">
+                    AI Engineer &amp; Full-Stack Developer. 6+ years building production-grade systems — from agentic
+                    LLM
+                    pipelines to scalable frontends. Currently at Cotiviti, wiring intelligent AI into healthcare.
+                </p>
+                <div class="hero-cta">
+                    <a href="Subham_AI_Engineer_Resume.pdf" download="Subham_Choudhary_Resume.pdf"
+                        class="btn btn-ghost">
+                        ↓ Download Resume
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-contact">
+                <a href="mailto:subham.choudhary.fullstack@gmail.com" class="contact-link">
+                    <div class="contact-link-icon" style="background:rgba(234,67,53,0.1);color:#ea4335">✉</div>
+                    <div>
+                        <div class="contact-link-label">Email</div>
+                        <div class="contact-link-value">subham.choudhary.fullstack@gmail.com</div>
+                    </div>
+                    <span class="contact-link-arrow">›</span>
+                </a>
+                <a href="https://www.linkedin.com/in/subhamchoudhary/" target="_blank" class="contact-link">
+                    <div class="contact-link-icon" style="background:rgba(10,102,194,0.1);color:#0a66c2">in</div>
+                    <div>
+                        <div class="contact-link-label">LinkedIn</div>
+                        <div class="contact-link-value">linkedin.com/in/subhamchoudhary</div>
+                    </div>
+                    <span class="contact-link-arrow">›</span>
+                </a>
+                <a href="https://github.com/subham22choudhary" target="_blank" class="contact-link">
+                    <div class="contact-link-icon" style="background:rgba(255,255,255,0.06);color:var(--text)">⌥</div>
+                    <div>
+                        <div class="contact-link-label">GitHub</div>
+                        <div class="contact-link-value">github.com/subham22choudhary</div>
+                    </div>
+                    <span class="contact-link-arrow">›</span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=8210219654" target="_blank" class="contact-link">
+                    <div class="contact-link-icon" style="background:rgba(37,211,102,0.1);color:#25d366">📱</div>
+                    <div>
+                        <div class="contact-link-label">Phone / WhatsApp</div>
+                        <div class="contact-link-value">+91 821-021-9654</div>
+                    </div>
+                    <span class="contact-link-arrow">›</span>
+                </a>
             </div>
         </div>
-        <div class="hero-stats">
-            <div class="stat-card">
-                <div class="stat-num" style="color: var(--accent2)">6+</div>
-                <div class="stat-label">Years exp.</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <span class="section-label">// capabilities</span>
+        <h2 class="section-title">The full stack</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <div class="skill-group-title">Agentic &amp; Generative AI</div>
+                <div class="skill-chips">
+                    <span class="chip">LLM Orchestration</span><span class="chip">Agentic AI Systems</span>
+                    <span class="chip">RAG Pipelines</span><span class="chip">Prompt Engineering</span>
+                    <span class="chip">Autonomous Agents</span><span class="chip">Tool-Calling APIs</span>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-num" style="color: var(--accent)">800+</div>
-                <div class="stat-label">Blogs shipped</div>
+            <div class="skill-group">
+                <div class="skill-group-title">AI Data &amp; Search</div>
+                <div class="skill-chips">
+                    <span class="chip">Vector Databases</span><span class="chip">Embeddings</span>
+                    <span class="chip">Semantic Search</span><span class="chip">Multi-Agent Systems</span>
+                    <span class="chip">Claude API</span><span class="chip">ChatGPT API</span>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-num" style="color: var(--accent3)">300K+</div>
-                <div class="stat-label">Users served</div>
+            <div class="skill-group">
+                <div class="skill-group-title">Frontend</div>
+                <div class="skill-chips">
+                    <span class="chip">React.js</span><span class="chip">Next.js</span>
+                    <span class="chip">TypeScript</span><span class="chip">JavaScript</span>
+                    <span class="chip">Tailwind CSS</span><span class="chip">Redux</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <div class="skill-group-title">Backend &amp; Cloud</div>
+                <div class="skill-chips">
+                    <span class="chip">Node.js</span><span class="chip">Express.js</span>
+                    <span class="chip">Python</span><span class="chip">AWS</span>
+                    <span class="chip">Docker</span><span class="chip">Kubernetes</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <div class="skill-group-title">CRM &amp; CMS</div>
+                <div class="skill-chips">
+                    <span class="chip">HubSpot</span><span class="chip">Salesforce</span>
+                    <span class="chip">WordPress</span><span class="chip">Shopify</span>
+                    <span class="chip">Webflow</span><span class="chip">CI/CD Pipelines</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <div class="skill-group-title">Databases &amp; Tools</div>
+                <div class="skill-chips">
+                    <span class="chip">MongoDB</span><span class="chip">MySQL</span>
+                    <span class="chip">PostgreSQL</span><span class="chip">Figma</span>
+                    <span class="chip">Git</span><span class="chip">Jest</span>
+                </div>
             </div>
         </div>
     </section>
@@ -719,7 +681,6 @@
     <section id="experience">
         <span class="section-label">// work history</span>
         <h2 class="section-title">Where I've<br>made impact</h2>
-
         <div class="timeline">
 
             <div class="timeline-item">
@@ -741,11 +702,9 @@
                     </li>
                 </ul>
                 <div class="job-tags">
-                    <span class="tag tag-green">Agentic AI</span>
-                    <span class="tag tag-green">RAG</span>
-                    <span class="tag tag-green">LLMs</span>
-                    <span class="tag">Multi-Agent</span>
-                    <span class="tag">Healthcare</span>
+                    <span class="tag tag-green">Agentic AI</span><span class="tag tag-green">RAG</span>
+                    <span class="tag tag-green">LLMs</span><span class="tag">Multi-Agent</span><span
+                        class="tag">Healthcare</span>
                 </div>
             </div>
 
@@ -767,11 +726,9 @@
                     <li>Optimised LLM context retrieval and agent memory management using hash maps and tries.</li>
                 </ul>
                 <div class="job-tags">
-                    <span class="tag">React.js</span>
-                    <span class="tag tag-orange">HubSpot CMS</span>
-                    <span class="tag tag-orange">Shopify</span>
-                    <span class="tag">LLM APIs</span>
-                    <span class="tag">Generative AI</span>
+                    <span class="tag">React.js</span><span class="tag tag-orange">HubSpot CMS</span>
+                    <span class="tag tag-orange">Shopify</span><span class="tag">LLM APIs</span><span
+                        class="tag">Generative AI</span>
                 </div>
             </div>
 
@@ -794,12 +751,9 @@
                         pipeline throughput.</li>
                 </ul>
                 <div class="job-tags">
-                    <span class="tag">React.js</span>
-                    <span class="tag">AWS</span>
-                    <span class="tag">RAG</span>
-                    <span class="tag">JWT</span>
-                    <span class="tag tag-orange">HubSpot</span>
-                    <span class="tag">Figma</span>
+                    <span class="tag">React.js</span><span class="tag">AWS</span><span class="tag">RAG</span>
+                    <span class="tag">JWT</span><span class="tag tag-orange">HubSpot</span><span
+                        class="tag">Figma</span>
                 </div>
             </div>
 
@@ -819,217 +773,24 @@
                         and semantic HTML.</li>
                 </ul>
                 <div class="job-tags">
-                    <span class="tag">React.js</span>
-                    <span class="tag">Redux</span>
-                    <span class="tag">Axios</span>
-                    <span class="tag">WCAG</span>
+                    <span class="tag">React.js</span><span class="tag">Redux</span><span class="tag">Axios</span><span
+                        class="tag">WCAG</span>
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- SKILLS -->
-    <section id="skills">
-        <span class="section-label">// capabilities</span>
-        <h2 class="section-title">The full stack</h2>
-
-        <div class="skills-grid">
-            <div class="skill-group">
-                <div class="skill-group-title">Agentic & Generative AI</div>
-                <div class="skill-chips">
-                    <span class="chip">LLM Orchestration</span>
-                    <span class="chip">Agentic AI Systems</span>
-                    <span class="chip">RAG Pipelines</span>
-                    <span class="chip">Prompt Engineering</span>
-                    <span class="chip">Tool-Calling APIs</span>
-                    <span class="chip">Autonomous Agents</span>
-                    <span class="chip">Claude API</span>
-                    <span class="chip">ChatGPT API</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <div class="skill-group-title">AI Data & Search</div>
-                <div class="skill-chips">
-                    <span class="chip">Vector Databases</span>
-                    <span class="chip">Embeddings</span>
-                    <span class="chip">Semantic Search</span>
-                    <span class="chip">Multi-Agent Systems</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <div class="skill-group-title">Frontend</div>
-                <div class="skill-chips">
-                    <span class="chip">React.js</span>
-                    <span class="chip">Next.js</span>
-                    <span class="chip">TypeScript</span>
-                    <span class="chip">JavaScript</span>
-                    <span class="chip">Tailwind CSS</span>
-                    <span class="chip">SCSS</span>
-                    <span class="chip">Webpack</span>
-                    <span class="chip">Redux</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <div class="skill-group-title">Backend & Cloud</div>
-                <div class="skill-chips">
-                    <span class="chip">Node.js</span>
-                    <span class="chip">Express.js</span>
-                    <span class="chip">Python</span>
-                    <span class="chip">AWS</span>
-                    <span class="chip">Docker</span>
-                    <span class="chip">Kubernetes</span>
-                    <span class="chip">CI/CD</span>
-                    <span class="chip">Terraform</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <div class="skill-group-title">CRM & CMS</div>
-                <div class="skill-chips">
-                    <span class="chip">HubSpot</span>
-                    <span class="chip">Salesforce</span>
-                    <span class="chip">WordPress</span>
-                    <span class="chip">Shopify</span>
-                    <span class="chip">Webflow</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <div class="skill-group-title">Databases & Tools</div>
-                <div class="skill-chips">
-                    <span class="chip">MongoDB</span>
-                    <span class="chip">MySQL</span>
-                    <span class="chip">PostgreSQL</span>
-                    <span class="chip">Figma</span>
-                    <span class="chip">Git</span>
-                    <span class="chip">Jest</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-        <span class="section-label">// personal work</span>
-        <h2 class="section-title">What I've built</h2>
-
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-icon">📦</div>
-                <div class="project-name">Procon</div>
-                <p class="project-desc">
-                    Full-stack professional book ordering platform. End-to-end order flow from browse to checkout — as
-                    smooth as ordering food online. JWT + Google Auth, Stripe payments, real-time Supabase
-                    subscriptions, and Row Level Security across the entire lifecycle.
-                </p>
-                <div class="project-stack">
-                    <span class="tag">Next.js</span>
-                    <span class="tag">Supabase</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">Stripe API</span>
-                    <span class="tag">Google Auth</span>
-                    <span class="tag">AWS</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon">✍️</div>
-                <div class="project-name">No-Code Content Platform</div>
-                <p class="project-desc">
-                    Internal publishing platform built at HighRadius that automated 800+ blog publications and increased
-                    content efficiency by 30%. Powered by React.js, DSA-optimised pipeline logic, and content workflows
-                    that non-engineers could operate independently.
-                </p>
-                <div class="project-stack">
-                    <span class="tag">React.js</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">AWS S3/EC2</span>
-                    <span class="tag tag-orange">HubSpot</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon">🤖</div>
-                <div class="project-name">Healthcare Agentic Pipeline</div>
-                <p class="project-desc">
-                    Multi-agent AI system at Cotiviti for autonomous clinical data processing and decision support.
-                    Orchestrates LLMs with tool-calling, manages context across complex healthcare pipelines, and
-                    delivers grounded answers through optimised RAG.
-                </p>
-                <div class="project-stack">
-                    <span class="tag tag-green">Agentic AI</span>
-                    <span class="tag tag-green">RAG</span>
-                    <span class="tag tag-green">Vector DB</span>
-                    <span class="tag">LLMs</span>
-                    <span class="tag">Python</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="contact-inner">
-            <div class="contact-text">
-                <span class="section-label">// get in touch</span>
-                <h2 class="section-title" style="margin-bottom: 1rem;">Let's build<br>something.</h2>
-                <p>Open to senior AI engineering roles, full-stack opportunities, or interesting side projects at the
-                    intersection of LLMs and real-world products.</p>
-            </div>
-            <div class="contact-links">
-                <a href="mailto:subham.choudhary.fullstack@gmail.com" class="contact-link">
-                    <div class="contact-link-icon" style="background: rgba(234,67,53,0.1); color: #ea4335;">✉</div>
-                    <div>
-                        <div class="contact-link-label">Email</div>
-                        <div class="contact-link-value">subham.choudhary.fullstack@gmail.com</div>
-                    </div>
-                    <span class="contact-link-arrow">›</span>
-                </a>
-                <a href="https://www.linkedin.com/in/subhamchoudhary/" target="_blank" class="contact-link">
-                    <div class="contact-link-icon" style="background: rgba(10,102,194,0.1); color: #0a66c2;">in</div>
-                    <div>
-                        <div class="contact-link-label">LinkedIn</div>
-                        <div class="contact-link-value">linkedin.com/in/subhamchoudhary</div>
-                    </div>
-                    <span class="contact-link-arrow">›</span>
-                </a>
-                <a href="https://github.com/subham22choudhary" target="_blank" class="contact-link">
-                    <div class="contact-link-icon" style="background: rgba(255,255,255,0.06); color: var(--text);">⌥
-                    </div>
-                    <div>
-                        <div class="contact-link-label">GitHub</div>
-                        <div class="contact-link-value">github.com/subham22choudhary</div>
-                    </div>
-                    <span class="contact-link-arrow">›</span>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=8210219654" target="_blank" class="contact-link">
-                    <div class="contact-link-icon" style="background: rgba(37,211,102,0.1); color: #25d366;">📱</div>
-                    <div>
-                        <div class="contact-link-label">Phone / WhatsApp</div>
-                        <div class="contact-link-value">+91 821-021-9654</div>
-                    </div>
-                    <span class="contact-link-arrow">›</span>
-                </a>
-            </div>
         </div>
     </section>
 
     <footer>
         <span>Subham Choudhary — AI Engineer</span>
-        <span>KIIT Bhubaneswar · 2022</span>
     </footer>
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', e => {
                 e.preventDefault();
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
+                const t = document.querySelector(a.getAttribute('href'));
+                if (t) t.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
